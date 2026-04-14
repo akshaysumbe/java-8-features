@@ -31,6 +31,7 @@ public class BiFunctionExample {
         };
 
 
+
         //------andThen-------
         Function<Order, String> toSummary = (order) -> "Order " + order.getId() + " with discounted price: " + order.getAmount() + " is successful";
         BiFunction<Order, Double, String> applyDiscountAndSummarize = applyDiscount.andThen(toSummary);

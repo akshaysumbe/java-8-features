@@ -8,6 +8,7 @@ public class Order {
     private String id;
     private String customerId;
     private double amount;
+    private String city;
     private String status;      // PENDING, CONFIRMED, SHIPPED, DELIVERED
     private String couponCode;
     private LocalDateTime createdAt;
@@ -15,10 +16,11 @@ public class Order {
     public Order() {
     }
 
-    public Order(String id, String customerId, double amount, String status, String couponCode, LocalDateTime createdAt) {
+    public Order(String id, String customerId, double amount, String city, String status, String couponCode, LocalDateTime createdAt) {
         this.id = id;
         this.customerId = customerId;
         this.amount = amount;
+        this.city = city;
         this.status = status;
         this.couponCode = couponCode;
         this.createdAt = createdAt;
@@ -46,6 +48,14 @@ public class Order {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getStatus() {
@@ -86,13 +96,13 @@ public class Order {
 
     public static List<Order> getOrders() {
         List<Order> orders = new ArrayList<>();
-        orders.add(new Order("101", "c101", 101, "PENDING", "OFF_10", LocalDateTime.now()));
-        orders.add(new Order("102", "c102", 102, "CONFIRMED", null, LocalDateTime.now()));
-        orders.add(new Order("103", "c103", 103, "SHIPPED", null, LocalDateTime.now()));
-        orders.add(new Order("104", "c104", 104, "DELIVERED", "OFF_5", LocalDateTime.now()));
-        orders.add(new Order("105", "c105", 105, "CONFIRMED", null, LocalDateTime.now()));
-        orders.add(new Order("106", null, 105, "PENDING", null, LocalDateTime.now()));
-        orders.add(new Order("107", "c107", 0, "PENDING", "OFF_5", LocalDateTime.now()));
+        orders.add(new Order("101", "c101", 101, "Pune", "PENDING", "OFF_10", LocalDateTime.now()));
+        orders.add(new Order("102", "c102", 102,"Bengaluru", "CONFIRMED", null, LocalDateTime.now()));
+        orders.add(new Order("103", "c103", 103,"Pune", "SHIPPED", null, LocalDateTime.now()));
+        orders.add(new Order("104", "c104", 104,"Sambhaji Nagar", "DELIVERED", "OFF_5", LocalDateTime.now()));
+        orders.add(new Order("105", "c105", 105,"Gurugram", "CONFIRMED", null, LocalDateTime.now()));
+        orders.add(new Order("106", null, 105,"Nagpur", "PENDING", null, LocalDateTime.now()));
+        orders.add(new Order("107", "c107", 0, "Pune", "PENDING", "OFF_5", LocalDateTime.now()));
 
         return orders;
     }

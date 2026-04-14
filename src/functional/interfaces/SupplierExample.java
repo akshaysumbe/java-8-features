@@ -24,6 +24,7 @@ public class SupplierExample {
                 UUID.randomUUID().toString(),
                 "GUEST",
                 0.0,
+                "Pune",
                 null,
                 "PENDING",
                 LocalDateTime.now()
