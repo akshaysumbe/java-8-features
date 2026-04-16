@@ -5,7 +5,7 @@ import streams.model.Order;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class FilterDemo {
+public class FilterExample {
     static void main() {
         List<Order> deliveredOrders = Order.orders.stream()
                 .filter(order -> order.getStatus().equals("DELIVERED"))
