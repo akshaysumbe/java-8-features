@@ -22,6 +22,7 @@ public class ConsumerExample {
         Consumer<Order> auditLog = order -> UTILITY_SERVICE.log("ORDER_CREATED", order.getId(), LocalDateTime.now());
 
         //save order to DB
+
         Consumer<Order> saveToDb = ORDER_REPOSITORY::saveOrder;
 
         // chaining consumers with andThen
