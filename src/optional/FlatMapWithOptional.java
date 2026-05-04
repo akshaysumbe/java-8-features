@@ -15,9 +15,11 @@ public class FlatMapWithOptional {
         Optional<Order> optOrder = orderService.findLastOrder("01");
 
         //double wrapped
-        Optional<Optional<Restaurant>> nested = optOrder.map(order -> restaurantService.findRestaurant(order.getRestaurantId()));
+        Optional<Optional<Restaurant>> nested =
+                optOrder.map(order -> restaurantService.findRestaurant(order.getRestaurantId()));
 
         //solution: flatMap
-        Optional<Restaurant> restaurant = optOrder.flatMap(order -> restaurantService.findRestaurant(order.getRestaurantId()));
+        Optional<Restaurant> restaurant =
+                optOrder.flatMap(order -> restaurantService.findRestaurant(order.getRestaurantId()));
     }
 }
