@@ -1,4 +1,4 @@
-package streams.terminal_ops;
+package streams.numeric_streams;
 
 import streams.model.Order;
 
