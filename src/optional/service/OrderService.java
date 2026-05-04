@@ -19,4 +19,8 @@ public class OrderService {
     public Optional<Order> findLastOrder2(String customerId) {
         return Optional.ofNullable(orderRepositoy.findLastByCustomerId(customerId));
     }
+
+    public Order getDefaultOrder(String number) {
+        return null;
+    }
 }
