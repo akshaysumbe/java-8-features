@@ -1,4 +1,4 @@
-package streams.practice.terminal_ops;
+package streams.practice;
 
 import java.util.Arrays;
 import java.util.List;
