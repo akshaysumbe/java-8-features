@@ -13,7 +13,6 @@ public class FrequencyCounter {
                                 Collectors.counting())
                 );
 
-
         System.out.println(collect);
     }
 }

@@ -89,8 +89,8 @@ public class Employee {
         employees.add(new Employee(103, "Prasmit", 1300.00, 102, "Semi Senior", List.of("Java", "React")));
         employees.add(new Employee(104, "Akshay", 2000.00, 101, "Senior", List.of("React", "Mongo DB")));
         employees.add(new Employee(105, "Mahesh", 2500.00, 103, "Senior", List.of(".NET", "SQL")));
-        employees.add(new Employee(105, "Suraj", 2600.00, 103, "Lead", List.of("Agile", "Leadership")));
-        employees.add(new Employee(106, "Akshay", 1600.00, 102, "Tester", List.of("Mockito", "Selenium")));
+        employees.add(new Employee(106, "Suraj", 2600.00, 103, "Lead", List.of("Agile", "Leadership")));
+        employees.add(new Employee(107, "Akshay", 1600.00, 102, "Tester", List.of("Mockito", "Selenium")));
         return  employees;
     }
 }
