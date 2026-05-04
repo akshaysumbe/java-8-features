@@ -33,4 +33,26 @@ public class CollectorsGroupBy {
                 );
         System.out.println(namesByDept);
     }
+
+    public static class MatchingPredicates {
+        static void main() {
+            //anyMatch
+            boolean haveJavaEnabledEmployees = Employee.employees().stream()
+                    .anyMatch(employee -> employee.getSkills().contains("Java"));
+
+            System.out.println(haveJavaEnabledEmployees);
+
+            //allMatch
+            boolean haveCCPPskills = Employee.employees().stream()
+                    .allMatch(employee -> employee.getSkills().containsAll(List.of("C", "C++")));
+
+            System.out.println(haveCCPPskills);// false as not all employees skilled in C & C++
+
+            //noneMatch
+            boolean chemistryEnabled = Employee.employees().stream()
+                    .noneMatch(employee -> employee.getSkills().contains("Chemistry"));
+
+            System.out.println(chemistryEnabled);
+        }
+    }
 }
